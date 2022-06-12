@@ -18,7 +18,7 @@ class DeployCluster extends React.Component {
   }
 
   updateReports() {
-    fetch('http://localhost:8080/progress-reports')
+    fetch('/progress-reports')
     .then(res => res.json())
     .then((data) => {
       this.setState({ clusterReports: data })

@@ -16,7 +16,10 @@ module.exports = merge(common('development'), {
     inline: true,
     historyApiFallback: true,
     overlay: true,
-    open: true
+    open: true,
+    proxy: {
+      '/progress-reports': 'http://localhost:8080',
+    },
   },
   module: {
     rules: [
