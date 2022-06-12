@@ -9,6 +9,11 @@ public class ProgressReport {
     public ProgressReport() {
     }
 
+    public ProgressReport(String attendeeName, List<String> statuses) {
+        this.attendeeName = attendeeName;
+        this.statuses = statuses;
+    }
+
     public String getAttendeeName() {
         return this.attendeeName;
     }
