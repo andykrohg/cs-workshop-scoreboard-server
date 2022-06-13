@@ -20,12 +20,12 @@ public class ProgressReportResource {
 
     public ProgressReportResource() {
         this.reports = new HashMap<String, ProgressReport>();
-        reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList("success", "success", "success", "pending", "pending"), Collections.emptyList()));
-        reports.put("krain", new ProgressReport("krain", Arrays.asList("success", "success", "pending", "pending", "pending"), Collections.emptyList()));
+        reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList("success", "success", "success", "pending", "pending", "pending"), Collections.emptyList()));
+        reports.put("krain", new ProgressReport("krain", Arrays.asList("success", "success", "pending", "pending", "pending", "pending"), Collections.emptyList()));
     }
 
     @GET
-    public List<ProgressReport> getReportsByCluster(@QueryParam("sort") String sort) {
+    public List<ProgressReport> getReports(@QueryParam("sort") String sort) {
         return this.reports.values().stream()
             .sorted(new Comparator<ProgressReport>() {
                 @Override

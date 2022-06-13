@@ -47,6 +47,14 @@ const DeployClusterReport = ({ clusterReports }) => {
               titleId="basic-with-issue-step5-title"
               aria-label="pending step"
             >
+              Add node labels
+            </ProgressStep>
+            <ProgressStep
+              variant={clusterReport.clusterTasks[5]}
+              id="basic-with-issue-step6"
+              titleId="basic-with-issue-step6-title"
+              aria-label="pending step"
+            >
               Setup Autoscaling
             </ProgressStep>
           </ProgressStepper>
