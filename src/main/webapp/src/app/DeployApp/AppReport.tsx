@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { PageSection, Title, ProgressStepper, ProgressStep } from '@patternfly/react-core';
 
-const DeployClusterReport = ({ clusterReports }) => {
+const DeployAppReport = ({ appReports }) => {
   return (
     <PageSection>
       <Title headingLevel="h1" size="xl">Getting started with ROSA</Title><br />
-      {clusterReports.map((clusterReport) =>
+      {appReports.map((appReport) =>
         <p>
-          <Title headingLevel="h1" size="lg">{clusterReport.attendeeName}</Title>
+          <Title headingLevel="h1" size="lg">{appReport.attendeeName}</Title>
           <ProgressStepper>
             <ProgressStep
-              variant={clusterReport.clusterTasks[0]}
+              variant={appReport.appTasks[0]}
               id="basic-with-issue-step1"
               titleId="basic-with-issue-step1-title"
               aria-label="completed step, step with success"
@@ -18,7 +18,7 @@ const DeployClusterReport = ({ clusterReports }) => {
               Cluster ready
             </ProgressStep>
             <ProgressStep
-              variant={clusterReport.clusterTasks[1]}
+              variant={appReport.appTasks[1]}
               id="basic-with-issue-step2"
               titleId="basic-with-issue-step2-title"
               aria-label="completed step, step with success"
@@ -26,7 +26,7 @@ const DeployClusterReport = ({ clusterReports }) => {
               Configure IDP
             </ProgressStep>
             <ProgressStep
-              variant={clusterReport.clusterTasks[2]}
+              variant={appReport.appTasks[2]}
               id="basic-with-issue-step3"
               titleId="basic-with-issue-step3-title"
               aria-label="completed step, step with warning"
@@ -34,7 +34,7 @@ const DeployClusterReport = ({ clusterReports }) => {
               Create a User
             </ProgressStep>
             <ProgressStep
-              variant={clusterReport.clusterTasks[3]}
+              variant={appReport.appTasks[3]}
               id="basic-with-issue-step4"
               titleId="basic-with-issue-step4-title"
               aria-label="step with info"
@@ -42,7 +42,7 @@ const DeployClusterReport = ({ clusterReports }) => {
               Create a MachinePool
             </ProgressStep>
             <ProgressStep
-              variant={clusterReport.clusterTasks[4]}
+              variant={appReport.appTasks[4]}
               id="basic-with-issue-step5"
               titleId="basic-with-issue-step5-title"
               aria-label="pending step"
@@ -60,4 +60,4 @@ const DeployClusterReport = ({ clusterReports }) => {
   );
 }
 
-export default DeployClusterReport ;
+export default DeployAppReport ;

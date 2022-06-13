@@ -4,14 +4,16 @@ import java.util.List;
 
 public class ProgressReport {
     private String attendeeName;
-    private List<String> statuses;
+    private List<String> clusterTasks;
+    private List<String> appTasks;
 
     public ProgressReport() {
     }
 
-    public ProgressReport(String attendeeName, List<String> statuses) {
+    public ProgressReport(String attendeeName, List<String> clusterTasks, List<String> appTasks) {
         this.attendeeName = attendeeName;
-        this.statuses = statuses;
+        this.clusterTasks = clusterTasks;
+        this.appTasks = appTasks;
     }
 
     public String getAttendeeName() {
@@ -22,11 +24,20 @@ public class ProgressReport {
         this.attendeeName = attendeeName;
     }
 
-    public List<String> getStatuses() {
-        return this.statuses;
+    public List<String> getClusterTasks() {
+        return this.clusterTasks;
     }
 
-    public void setStatuses(List<String> statuses) {
-        this.statuses = statuses;
-    }    
+    public void setClusterTasks(List<String> clusterTasks) {
+        this.clusterTasks = clusterTasks;
+    }
+
+    public List<String> getAppTasks() {
+        return this.appTasks;
+    }
+
+    public void setAppTasks(List<String> appTasks) {
+        this.appTasks = appTasks;
+    }
+    
 }

@@ -18,7 +18,7 @@ class DeployCluster extends React.Component {
   }
 
   updateReports() {
-    fetch('/progress-reports')
+    fetch('/progress-reports?sort=cluster')
     .then(res => res.json())
     .then((data) => {
       this.setState({ clusterReports: data })
