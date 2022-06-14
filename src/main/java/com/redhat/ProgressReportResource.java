@@ -20,8 +20,8 @@ public class ProgressReportResource {
 
     public ProgressReportResource() {
         this.reports = new HashMap<String, ProgressReport>();
-        reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList("success", "success", "success", "pending", "pending", "pending"), Arrays.asList()));
-        reports.put("krain", new ProgressReport("krain", Arrays.asList("success", "success", "pending", "pending", "pending", "pending"), Arrays.asList()));
+        // reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList("success", "success", "success", "pending", "pending", "pending"), Arrays.asList()));
+        // reports.put("krain", new ProgressReport("krain", Arrays.asList("success", "success", "pending", "pending", "pending", "pending"), Arrays.asList()));
     }
 
     @GET
