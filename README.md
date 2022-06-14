@@ -3,7 +3,7 @@ This repository houses the server-side components for the **cloud services works
 
 It is composed of a quarkus resteasy backend in `src/main/java` and a pattern fly/reactjs frontend in `src/main/webapp`.
 
-## Running
+## Run locally
 Clone this repository, and `cd` into it:
 ```
 git clone https://github.com/andykrohg/cs-workshop-scoreboard-server.git
@@ -23,7 +23,21 @@ npm run start:dev
 The app should open at http://localhost:3000 in your browser.
 
 ## Building
-```
+```bash
+# Build a jar
 mvn clean package
+
+# Run locally on http://localhost:8080
 java -jar target/quarkus-app/quarkus-run.jar
+
+# Or run a container build
+podman build -t scoreboard-server . -f src/main/docker/Dockerfile.jvm
+```
+
+## Running on OpenShift
+```bash
+oc new-app quay.io/akrohg/cs-workshop-scoreboard-server
+oc expose svc/cs-workshop-scoreboard-server
+
+oc get route cs-workshop-scoreboard-server
 ```
