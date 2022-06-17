@@ -1,7 +1,9 @@
 # Cloud Services Workshop Scoreboard - Server
 This repository houses the server-side components for the **cloud services workshop scoreboard**, which displays user progress for workshop tasks.
 
-It is composed of a quarkus resteasy backend in `src/main/java` and a pattern fly/reactjs frontend in `src/main/webapp`.
+It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly/reactjs frontend in `src/main/webapp`. It looks like this:
+
+![Server View](images/server_view.png)
 
 ## Run locally
 Clone this repository, and `cd` into it:
@@ -20,7 +22,7 @@ To start the frontend in dev mode, open a new terminal, and run:
 cd src/main/webapp
 npm run start:dev
 ```
-The app should open at http://localhost:3000 in your browser.
+The app should open at http://localhost:9000 in your browser.
 
 ## Building
 ```bash
