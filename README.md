@@ -5,6 +5,9 @@ It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly
 
 ![Server View](images/server_view.png)
 
+Once the server is deployed, your workshop participants will need to deploy a **telemetry agent** to their clusters to continually report their status. They'll need:
+* The URL of your Scoreboard Server (no trailing slashes), and
+* Instructions for deploying the agent, which can be found here: https://red.ht/cs-workshop-scoreboard
 ## Run locally
 Clone this repository, and `cd` into it:
 ```
