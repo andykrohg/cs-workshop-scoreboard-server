@@ -1,5 +1,5 @@
 # Cloud Services Workshop Scoreboard - Server
-This repository houses the server-side components for the **cloud services workshop scoreboard**, which displays user progress for workshop tasks.
+This repository houses the server-side components for the **cloud services workshop scoreboard**, which displays live updates of user progress in the [ROSA workshop](https://rosaworkshop.io). This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
 
 It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly/reactjs frontend in `src/main/webapp`. It looks like this:
 
