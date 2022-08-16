@@ -4,7 +4,8 @@ import { PageSection, Title, ProgressStepper, ProgressStep } from '@patternfly/r
 const DeployClusterReport = ({ clusterReports }) => {
   return (
     <PageSection>
-      <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title><br />
+      <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title>
+      <Title headingLevel="h1" size="xl">SERVER_URL={window.location.href.replace(/\/$/i, "")}</Title><br />
       <Title headingLevel="h1" size="xl">Getting started with ROSA</Title><br />
       {clusterReports.map((clusterReport) =>
         <p>
