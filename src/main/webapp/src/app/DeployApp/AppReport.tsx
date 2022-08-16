@@ -4,7 +4,6 @@ import { PageSection, Title, ProgressStepper, ProgressStep } from '@patternfly/r
 const DeployAppReport = ({ appReports }) => {
   return (
     <PageSection>
-      <Title headingLevel="h1" size="xl">ROSA Symposium Scoreboard</Title><br />
       <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title><br />
       <Title headingLevel="h1" size="xl">Deploy the application</Title><br />
       {appReports.map((appReport) =>

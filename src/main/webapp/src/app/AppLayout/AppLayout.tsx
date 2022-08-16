@@ -7,11 +7,12 @@ import {
   NavExpandable,
   Page,
   PageHeader,
+  PageHeaderTools,
   PageSidebar,
   SkipToContent
 } from '@patternfly/react-core';
 import { routes, IAppRoute, IAppRouteGroup } from '@app/routes';
-import logo from '@app/bgimages/Patternfly-Logo.svg';
+import logo from '@app/bgimages/hyper.png';
 
 interface IAppLayout {
   children: React.ReactNode;
@@ -37,7 +38,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       history.push('/');
     }
     return (
-      <img src={logo} onClick={handleClick} alt="PatternFly Logo" />
+      <img src={logo} onClick={handleClick} alt="Logo"/>
     );
   }
 
@@ -45,6 +46,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     <PageHeader
       logo={<LogoImg />}
       showNavToggle
+      headerTools={<PageHeaderTools>ROSA Symposium Scoreboard</PageHeaderTools>}
       isNavOpen={isNavOpen}
       onNavToggle={isMobileView ? onNavToggleMobile : onNavToggle}
     />
