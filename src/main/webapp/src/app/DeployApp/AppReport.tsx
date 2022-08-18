@@ -1,11 +1,14 @@
+import { CodeBlock, CodeBlockCode, PageSection, ProgressStep, ProgressStepper, Title } from '@patternfly/react-core';
 import * as React from 'react';
-import { PageSection, Title, ProgressStepper, ProgressStep } from '@patternfly/react-core';
 
 const DeployAppReport = ({ appReports }) => {
   return (
     <PageSection>
       <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title>
-      <Title headingLevel="h1" size="xl">SERVER_URL={window.location.href.replace(/\/deploy-the-app$/i, "")}</Title><br />
+
+      <CodeBlock>
+        <CodeBlockCode id="code-content">SERVER_URL={window.location.href.replace(/\/deploy-the-app$/i, "")}</CodeBlockCode><br/>
+      </CodeBlock>
       <Title headingLevel="h1" size="xl">Deploy the application</Title><br />
       {appReports.map((appReport) =>
         <p>
@@ -86,4 +89,4 @@ const DeployAppReport = ({ appReports }) => {
   );
 }
 
-export default DeployAppReport ;
+export default DeployAppReport;
