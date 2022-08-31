@@ -7,7 +7,7 @@ const DeployAppReport = ({ appReports }) => {
       <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title>
 
       <CodeBlock>
-        <CodeBlockCode id="code-content">SERVER_URL={window.location.href.replace(/\/deploy-the-app$/i, "")}</CodeBlockCode><br/>
+        <CodeBlockCode id="code-content">SCOREBOARD_SERVER={window.location.href.replace(/\/deploy-the-app$/i, "")}</CodeBlockCode><br/>
       </CodeBlock>
       <Title headingLevel="h1" size="xl">Deploy the application</Title><br />
       {appReports.map((appReport) =>
