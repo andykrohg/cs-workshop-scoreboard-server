@@ -4,7 +4,7 @@ import { PageSection, Title, ProgressStepper, ProgressStep, CodeBlock, CodeBlock
 const DeployClusterReport = ({ clusterReports }) => {
   return (
     <PageSection>
-      <Title headingLevel="h1" size="xl">Join now: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title>
+      <Title headingLevel="h1" size="xl">Get the client here: <a href="https://red.ht/cs-workshop-scoreboard" target="_blank">https://red.ht/cs-workshop-scoreboard</a></Title>
       <CodeBlock>
         <CodeBlockCode id="code-content">SCOREBOARD_SERVER={window.location.href.replace(/\/$/i, "")}</CodeBlockCode><br/>
       </CodeBlock>
