@@ -4,16 +4,15 @@ import java.util.List;
 
 public class ProgressReport {
     private String attendeeName;
-    private List<String> clusterTasks;
-    private List<String> appTasks;
+    private List<WorkshopTask> workshopTasks;
+
 
     public ProgressReport() {
     }
 
-    public ProgressReport(String attendeeName, List<String> clusterTasks, List<String> appTasks) {
+    public ProgressReport(String attendeeName, List<WorkshopTask> workshopTasks) {
         this.attendeeName = attendeeName;
-        this.clusterTasks = clusterTasks;
-        this.appTasks = appTasks;
+        this.workshopTasks = workshopTasks;
     }
 
     public String getAttendeeName() {
@@ -24,20 +23,30 @@ public class ProgressReport {
         this.attendeeName = attendeeName;
     }
 
-    public List<String> getClusterTasks() {
-        return this.clusterTasks;
+    public List<WorkshopTask> getWorkshopTasks() {
+        return this.workshopTasks;
     }
 
-    public void setClusterTasks(List<String> clusterTasks) {
-        this.clusterTasks = clusterTasks;
+    public void setWorkshopTasks(List<WorkshopTask> workshopTasks) {
+        this.workshopTasks = workshopTasks;
     }
 
-    public List<String> getAppTasks() {
-        return this.appTasks;
+    public ProgressReport attendeeName(String attendeeName) {
+        setAttendeeName(attendeeName);
+        return this;
     }
 
-    public void setAppTasks(List<String> appTasks) {
-        this.appTasks = appTasks;
+    public ProgressReport workshopTasks(List<WorkshopTask> workshopTasks) {
+        setWorkshopTasks(workshopTasks);
+        return this;
     }
-    
+
+    @Override
+    public String toString() {
+        return "{" +
+            " attendeeName='" + getAttendeeName() + "'" +
+            ", workshopTasks='" + getWorkshopTasks() + "'" +
+            "}";
+    }
+
 }

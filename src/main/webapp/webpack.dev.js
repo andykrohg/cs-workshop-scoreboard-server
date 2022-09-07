@@ -18,7 +18,7 @@ module.exports = merge(common('development'), {
     overlay: true,
     open: true,
     proxy: {
-      '/progress-reports*': 'http://localhost:8080',
+      '/progress-reports*': 'http://127.0.0.1:8080',
     },
   },
   module: {

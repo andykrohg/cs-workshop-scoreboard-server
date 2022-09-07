@@ -1,7 +1,6 @@
 package com.redhat;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -20,27 +19,20 @@ public class ProgressReportResource {
 
     public ProgressReportResource() {
         this.reports = new HashMap<String, ProgressReport>();
-        // reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList("success", "success", "success", "pending", "pending", "pending"), Arrays.asList()));
-        // reports.put("krain", new ProgressReport("krain", Arrays.asList("success", "success", "pending", "pending", "pending", "pending"), Arrays.asList()));
+        reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList(new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"))));
     }
 
     @GET
-    public List<ProgressReport> getReports(@QueryParam("sort") String sort) {
+    public List<ProgressReport> getReports(@QueryParam("module") String module) {
         return this.reports.values().stream()
+            .map(report -> new ProgressReport(report.getAttendeeName(), report.getWorkshopTasks().stream().filter(workshopTask -> workshopTask.getModule().equals(module)).collect(Collectors.toList())))
             .sorted(new Comparator<ProgressReport>() {
                 @Override
                 public int compare(ProgressReport o1, ProgressReport o2) {
-                    if (sort.equals("cluster")) {
-                        return Long.compare(
-                            o2.getClusterTasks().stream().filter(status -> status.equals("success")).count(), 
-                            o1.getClusterTasks().stream().filter(status -> status.equals("success")).count());
-                    } else {
-                        return Long.compare(
-                            o2.getAppTasks().stream().filter(status -> status.equals("success")).count(), 
-                            o1.getAppTasks().stream().filter(status -> status.equals("success")).count());
-                    }
+                    return Long.compare(
+                        o2.getWorkshopTasks().stream().filter(status -> status.equals("success")).count(), 
+                        o1.getWorkshopTasks().stream().filter(status -> status.equals("success")).count());
                 }
-                
             })
             .collect(Collectors.toList());
     }

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "name": "Getting started with ROSA",
+        "path": "/",
+        "tasks": [
+            "Cluster ready",
+            "Configure IDP",
+            "Create a User",
+            "Create a MachinePool",
+            "Add node labels",
+            "Setup Autoscaling"
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Deploy the application",
+        "path": "/deploy-the-application",
+        "tasks": [
+            "Deploy backend service",
+            "Deploy frontend service",
+            "Make the app malfunction",
+            "Create a file using the app",
+            "Create a Horizontal Pod Autoscaler",
+            "Install the Cluster Logging Addon Service",
+            "Create an s2i deployment",
+            "Setup a webhook"
+        ]
+    }
+]
