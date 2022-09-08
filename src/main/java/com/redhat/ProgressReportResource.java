@@ -19,7 +19,6 @@ public class ProgressReportResource {
 
     public ProgressReportResource() {
         this.reports = new HashMap<String, ProgressReport>();
-        reports.put("akrohg", new ProgressReport("akrohg", Arrays.asList(new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"), new WorkshopTask("0", "success"))));
     }
 
     @GET
