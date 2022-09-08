@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { Route, RouteComponentProps, Switch } from 'react-router-dom';
 import { accessibleRouteChangeHandler } from '@app/utils/utils';
-import { DeployCluster } from '@app/DeployCluster/DeployCluster';
-import { DeployApp } from '@app/DeployApp/DeployApp';
-import { Support } from '@app/Support/Support';
-import { GeneralSettings } from '@app/Settings/General/GeneralSettings';
-import { ProfileSettings } from '@app/Settings/Profile/ProfileSettings';
+import { Module } from '@app/Module/Module';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
+import { modules } from "../module-definitions/modules.json";
 
 let routeFocusTimer: number;
 export interface IAppRoute {
@@ -21,6 +18,8 @@ export interface IAppRoute {
   title: string;
   isAsync?: boolean;
   routes?: undefined;
+  tasks: string[];
+  moduleId: string;
 }
 
 export interface IAppRouteGroup {
@@ -30,22 +29,19 @@ export interface IAppRouteGroup {
 
 export type AppRouteConfig = IAppRoute | IAppRouteGroup;
 
-const routes: AppRouteConfig[] = [
-  {
-    component: DeployCluster,
+const moduleDefinitions = require("../module-definitions/modules.json");
+
+const routes: AppRouteConfig[] = moduleDefinitions.map( (moduleDefinition) => {
+  return {
+    component: Module,
     exact: true,
-    label: 'Getting started with ROSA',
-    path: '/',
-    title: 'Getting started with ROSA',
-  },
-  {
-    component: DeployApp,
-    exact: true,
-    label: 'Deploy the application',
-    path: '/deploy-the-app',
-    title: 'Deploy the application',
-  },
-];
+    label: moduleDefinition.name,
+    path: moduleDefinition.path,
+    title: moduleDefinition.name,
+    tasks: moduleDefinition.tasks,
+    moduleId: moduleDefinition.id
+  }
+})
 
 // a custom hook for sending focus to the primary content container
 // after a view has loaded so that subsequent press of tab key
@@ -62,12 +58,12 @@ const useA11yRouteChange = (isAsync: boolean) => {
   }, [isAsync, lastNavigation]);
 };
 
-const RouteWithTitleUpdates = ({ component: Component, isAsync = false, title, ...rest }: IAppRoute) => {
+const RouteWithTitleUpdates = ({ component: Component, isAsync = false, title, moduleId, tasks, ...rest }: IAppRoute) => {
   useA11yRouteChange(isAsync);
   useDocumentTitle(title);
 
   function routeWithTitle(routeProps: RouteComponentProps) {
-    return <Component {...rest} {...routeProps} />;
+    return <Module id={moduleId} name={title} tasks={tasks} {...rest} {...routeProps} />;
   }
 
   return <Route render={routeWithTitle} {...rest}/>;
@@ -86,13 +82,15 @@ const flattenedRoutes: IAppRoute[] = routes.reduce(
 const AppRoutes = (): React.ReactElement => (
   <LastLocationProvider>
     <Switch>
-      {flattenedRoutes.map(({ path, exact, component, title, isAsync }, idx) => (
+      {flattenedRoutes.map(({ path, exact, component, moduleId, title, tasks, isAsync }, idx) => (
         <RouteWithTitleUpdates
           path={path}
           exact={exact}
           component={component}
           key={idx}
+          moduleId={moduleId}
           title={title}
+          tasks={tasks}
           isAsync={isAsync}
         />
       ))}
