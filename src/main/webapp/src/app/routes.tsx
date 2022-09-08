@@ -5,7 +5,6 @@ import { Module } from '@app/Module/Module';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
-import { modules } from "../module-definitions/modules.json";
 
 let routeFocusTimer: number;
 export interface IAppRoute {
