@@ -1,20 +1,20 @@
 [
     {
         "id": "0",
-        "name": "Getting started with ROSA",
+        "name": "Lab 1 - Go Microservices",
         "path": "/",
         "tasks": [
             "Cluster ready",
-            "Configure IDP",
-            "Create a User",
-            "Create a MachinePool",
-            "Add node labels",
-            "Setup Autoscaling"
+            "Create workshop project",
+            "Deploy MongoDB",
+            "Deploy Ratings API",
+            "Deploy Ratings frontend",
+            "Create Network Policy"
         ]
     },
     {
         "id": "1",
-        "name": "Deploy the application",
+        "name": "Lab 2 - ARO Internals",
         "path": "/deploy-the-application",
         "tasks": [
             "Deploy backend service",
@@ -22,9 +22,7 @@
             "Make the app malfunction",
             "Create a file using the app",
             "Create a Horizontal Pod Autoscaler",
-            "Install the Cluster Logging Addon Service",
-            "Create an s2i deployment",
-            "Setup a webhook"
+            "Create a Machine Autoscaler"
         ]
     }
 ]
