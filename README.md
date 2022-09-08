@@ -1,5 +1,5 @@
-# Cloud Services Workshop Scoreboard - Server
-This repository houses the server-side components for the **cloud services workshop scoreboard**, which displays live updates of user progress in the [ARO workshop](https://aroworkshop.io). This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
+# ARO Workshop Scoreboard - Server
+This repository houses the server-side components for the **ARO workshop scoreboard**, which displays live updates of user progress in the [ARO workshop](https://aroworkshop.io). This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
 
 It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly/reactjs frontend in `src/main/webapp`. It looks like this:
 
@@ -7,11 +7,11 @@ It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly
 
 Once the server is deployed, your workshop participants will need to deploy a **telemetry agent** to their clusters to continually report their status. They'll need:
 * The URL of your Scoreboard Server (no trailing slashes), and
-* Instructions for deploying the agent, which can be found here: https://red.ht/cs-workshop-scoreboard
+* Instructions for deploying the agent, which can be found here: https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/aro#deploy-me
 ## Run locally
 Clone this repository, and `cd` into it:
 ```
-git clone https://github.com/andykrohg/cs-workshop-scoreboard-server.git
+git clone https://github.com/andykrohg/cs-workshop-scoreboard-server.git --branch aro
 cd cs-workshop-scoreboard-server
 ```
 
@@ -41,7 +41,7 @@ podman build -t scoreboard-server . -f src/main/docker/Dockerfile.jvm
 
 ## Running on OpenShift
 ```bash
-oc new-app quay.io/akrohg/cs-workshop-scoreboard-server
+oc new-app quay.io/akrohg/cs-workshop-scoreboard-server:aro
 oc expose svc/cs-workshop-scoreboard-server
 
 oc get route cs-workshop-scoreboard-server
