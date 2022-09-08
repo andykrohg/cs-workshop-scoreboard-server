@@ -1,6 +1,8 @@
 # ARO Workshop Scoreboard - Server
 This repository houses the server-side components for the **ARO workshop scoreboard**, which displays live updates of user progress in the [ARO workshop](https://aroworkshop.io). This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
 
+> If you're looking for the scoreboard server for the **ROSA Workshop**, go [here](https://github.com/andykrohg/cs-workshop-scoreboard-server/tree/rosa) instead.
+
 It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly/reactjs frontend in `src/main/webapp`. It looks like this:
 
 ![Server View](images/server_view.png)
