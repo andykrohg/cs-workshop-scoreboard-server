@@ -9,7 +9,7 @@ It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly
 
 Once the server is deployed, your workshop participants will need to deploy a **telemetry agent** to their clusters to continually report their status. They'll need:
 * The URL of your Scoreboard Server, and
-* Instructions for deploying the agent, which can be found here: https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/aro#deploy-me
+* Instructions for deploying the agent, which can be found here: https://red.ht/aro-workshop-scoreboard-client
 
 ## Running on OpenShift
 Run the commands below to deploy your scoreboard server to OpenShift. Once it's running, present the scoreboard on the screen to track progress as participants get their agents deployed.
