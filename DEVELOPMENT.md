@@ -55,7 +55,7 @@ You can customize the workshop modules that appear in the left navigation pane, 
 ]
 ```
 
-You can also customize the title and logo that appear in the top navbar by modifying `src/main/webapp/src/app/AppLayout/AppLayout.tsx`. Once you're satisfied with your changes, proceed below to build a container.
+You can also customize the title and logo that appear in the top navbar by modifying `src/main/webapp/src/app/AppLayout/AppLayout.tsx`. Once you're satisfied with your changes, proceed below to build a container. You'll also need to create your own client image, instructions for which can be found [here](https://github.com/andykrohg/cs-workshop-scoreboard-client/blob/rosa/DEVELOPMENT.md).
 
 ## Building
 1. First, run a maven build:
