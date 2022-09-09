@@ -8,7 +8,7 @@ It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly
 ![Server View](images/server_view.png)
 
 Once the server is deployed, your workshop participants will need to deploy a **telemetry agent** to their clusters to continually report their status. They'll need:
-* The URL of your Scoreboard Server (no trailing slashes), and
+* The URL of your Scoreboard Server, and
 * Instructions for deploying the agent, which can be found here: https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/rosa#deploy-me
 
 ## Running on OpenShift
