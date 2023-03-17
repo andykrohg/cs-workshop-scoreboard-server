@@ -46,7 +46,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     <PageHeader
       logo={<LogoImg />}
       showNavToggle
-      headerTools={<PageHeaderTools>ROSA Symposium Scoreboard</PageHeaderTools>}
+      headerTools={<PageHeaderTools>OpenShift Workshop Scoreboard</PageHeaderTools>}
       isNavOpen={isNavOpen}
       onNavToggle={isMobileView ? onNavToggleMobile : onNavToggle}
     />
