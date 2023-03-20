@@ -4,15 +4,24 @@ import java.util.List;
 
 public class ProgressReport {
     private String attendeeName;
+    private String displayName;
     private List<WorkshopTask> workshopTasks;
-
 
     public ProgressReport() {
     }
 
-    public ProgressReport(String attendeeName, List<WorkshopTask> workshopTasks) {
+    public ProgressReport(String attendeeName, String displayName, List<WorkshopTask> workshopTasks) {
         this.attendeeName = attendeeName;
+        this.displayName = displayName;
         this.workshopTasks = workshopTasks;
+    }
+
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getAttendeeName() {

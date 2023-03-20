@@ -28,14 +28,19 @@ class Module extends React.Component<{id:string, name:string, tasks:string[]}> {
   render() {
     return (
       <PageSection>
-      <Title headingLevel="h1" size="xl">Get the client here: <a href="https://red.ht/rosa-workshop-scoreboard-client" target="_blank">https://red.ht/rosa-workshop-scoreboard-client</a></Title>
+      <Title headingLevel="h1" size="xl">Update your name: </Title>
       <CodeBlock>
-        <CodeBlockCode id="code-content">SCOREBOARD_SERVER={window.location.href.replace(/\/$/i, "")}</CodeBlockCode><br/>
+        <CodeBlockCode id="code-content">
+          oc create cm my-name --from-literal=name="Your Name"
+        </CodeBlockCode><br/>
+        <CodeBlockCode id="code-content2">
+          oc label cm/my-name ocp4=getting-started        
+        </CodeBlockCode><br/>
       </CodeBlock>
       <Title headingLevel="h1" size="xl">{this.props.name}</Title><br />
       {this.state.module1Reports.map((moduleReport:any) =>
         <p>
-          <Title headingLevel="h1" size="lg">{moduleReport.attendeeName}</Title>
+          <Title headingLevel="h1" size="lg">{moduleReport.displayName ? moduleReport.displayName : moduleReport.attendeeName}</Title>
           <ProgressStepper>
             {this.props.tasks.map((task:any, i) =>
             <ProgressStep variant={moduleReport.workshopTasks[i].status}>

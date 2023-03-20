@@ -1,6 +1,5 @@
 package com.redhat;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +23,7 @@ public class ProgressReportResource {
     @GET
     public List<ProgressReport> getReports(@QueryParam("module") String module) {
         return this.reports.values().stream()
-            .map(report -> new ProgressReport(report.getAttendeeName(), report.getWorkshopTasks().stream().filter(workshopTask -> workshopTask.getModule().equals(module)).collect(Collectors.toList())))
+            .map(report -> new ProgressReport(report.getAttendeeName(), report.getDisplayName(), report.getWorkshopTasks().stream().filter(workshopTask -> workshopTask.getModule().equals(module)).collect(Collectors.toList())))
             .sorted(new Comparator<ProgressReport>() {
                 @Override
                 public int compare(ProgressReport o1, ProgressReport o2) {
