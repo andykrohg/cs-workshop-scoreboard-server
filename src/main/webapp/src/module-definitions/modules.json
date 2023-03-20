@@ -5,7 +5,7 @@
         "path": "/",
         "tasks": [
             "First Container",
-            "Probes",
+            "Scaling",
             "Expose Your Application",
             "RBAC",
             "Deploy From Source",

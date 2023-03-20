@@ -37,7 +37,9 @@ public class ProgressReportResource {
     }
 
     @PUT
-    public void publishReport(ProgressReport progressReport) {
-        this.reports.put(progressReport.getAttendeeName(), progressReport);
+    public void publishReports(List<ProgressReport> progressReports) {
+        for (ProgressReport report :progressReports) {
+            this.reports.put(report.getAttendeeName(), report);
+        }
     }
 }
