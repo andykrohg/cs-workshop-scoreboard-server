@@ -5,9 +5,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "rosa" ]
-#  pull_request:
-#    branches: [ "rosa" ]
+    branches: [ "ocp4-getting-started" ]
 
 jobs:
   build:
@@ -34,7 +32,7 @@ jobs:
     - name: Build and push container images
       uses: docker/build-push-action@v2
       with:
-        tags: quay.io/akrohg/cs-workshop-scoreboard-server:rosa
+        tags: quay.io/akrohg/cs-workshop-scoreboard-server:ocp4-getting-started
         push: true
         file: src/main/docker/Dockerfile.jvm
         context: .
