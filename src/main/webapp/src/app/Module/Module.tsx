@@ -28,16 +28,16 @@ class Module extends React.Component<{id:string, name:string, tasks:string[]}> {
   render() {
     return (
       <PageSection>
-      <Title headingLevel="h1" size="xl">Update your name: </Title>
+      <Title headingLevel="h1" size="xl">{this.props.name}</Title><br />
+      <Title headingLevel="h2" size="lg">Update your name: </Title>
       <CodeBlock>
         <CodeBlockCode id="code-content">
           oc create cm my-name --from-literal=name="Your Name"
-        </CodeBlockCode><br/>
+        </CodeBlockCode>
         <CodeBlockCode id="code-content2">
           oc label cm/my-name ocp4=getting-started        
         </CodeBlockCode><br/>
       </CodeBlock>
-      <Title headingLevel="h1" size="xl">{this.props.name}</Title><br />
       {this.state.module1Reports.map((moduleReport:any) =>
         <p>
           <Title headingLevel="h1" size="lg">{moduleReport.displayName ? moduleReport.displayName : moduleReport.attendeeName}</Title>
