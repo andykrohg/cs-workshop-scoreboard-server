@@ -31,8 +31,11 @@ class Module extends React.Component<{id:string, name:string, tasks:string[]}> {
       <Title headingLevel="h1" size="xl">{this.props.name}</Title><br />
       <Title headingLevel="h2" size="lg">Update your name: </Title>
       <CodeBlock>
+      <CodeBlockCode id="code-content">
+          export MY_NAME="YOUR NAME HERE"
+        </CodeBlockCode><br/>
         <CodeBlockCode id="code-content">
-          oc create cm my-name --from-literal=name="Your Name"
+          oc create cm my-name --from-literal=name="$MY_NAME"
         </CodeBlockCode>
         <CodeBlockCode id="code-content2">
           oc label cm/my-name ocp4=getting-started        
