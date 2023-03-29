@@ -1,28 +1,16 @@
 [
     {
         "id": "0",
-        "name": "Lab 1 - Go Microservices",
+        "name": "Workshop Modules",
         "path": "/",
         "tasks": [
-            "Cluster ready",
-            "Create workshop project",
-            "Deploy MongoDB",
-            "Deploy Ratings API",
-            "Deploy Ratings frontend",
-            "Create Network Policy"
-        ]
-    },
-    {
-        "id": "1",
-        "name": "Lab 2 - ARO Internals",
-        "path": "/deploy-the-application",
-        "tasks": [
-            "Deploy backend service",
-            "Deploy frontend service",
-            "Make the app malfunction",
-            "Create a file using the app",
-            "Create a Horizontal Pod Autoscaler",
-            "Create a Machine Autoscaler"
+            "Registry Configuration",
+            "Podman Basics",
+            "Isolation",
+            "SELinux and Containers",
+            "Inspecting Content",
+            "Podman API",
+            "Secure Builds"
         ]
     }
 ]
