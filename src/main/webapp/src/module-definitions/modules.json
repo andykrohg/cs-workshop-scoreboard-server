@@ -5,8 +5,9 @@
         "path": "/",
         "tasks": [
             "Registry Configuration",
-            "Podman Basics",
-            "Isolation",
+            "Push an Image to the Registry",
+            "Specify an Effective User",
+            "Customize Linux Capabilities",
             "SELinux and Containers",
             "Inspecting Content",
             "Podman API",
