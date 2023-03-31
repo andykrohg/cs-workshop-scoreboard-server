@@ -28,7 +28,7 @@ class Module extends React.Component<{id:string, name:string, tasks:string[]}> {
   render() {
     return (
       <PageSection>
-      <Title headingLevel="h1" size="xl">Get the client here: <a href="https://red.ht/aro-workshop-scoreboard-client" target="_blank">https://red.ht/aro-workshop-scoreboard-client</a></Title>
+      <Title headingLevel="h1" size="xl">Get the client here: <a href="https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/practical-container-security" target="_blank">https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/practical-container-security</a></Title>
       <CodeBlock>
         <CodeBlockCode id="code-content">SCOREBOARD_SERVER={window.location.href.replace(/\/$/i, "")}</CodeBlockCode><br/>
       </CodeBlock>
