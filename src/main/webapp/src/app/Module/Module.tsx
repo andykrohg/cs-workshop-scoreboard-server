@@ -35,10 +35,10 @@ class Module extends React.Component<{id:string, name:string, tasks:string[]}> {
           export MY_NAME="YOUR NAME HERE"
         </CodeBlockCode><br/>
         <CodeBlockCode id="code-content">
-          oc create cm my-name --from-literal=name="$MY_NAME"
+          oc create cm my-name --from-literal=username=$(oc whoami) --from-literal=displayName="$MY_NAME"
         </CodeBlockCode>
         <CodeBlockCode id="code-content2">
-          oc label cm/my-name ocp4=getting-started        
+          oc label cm/my-name workshop=scoreboard        
         </CodeBlockCode><br/>
       </CodeBlock>
       {this.state.module1Reports.map((moduleReport:any) =>

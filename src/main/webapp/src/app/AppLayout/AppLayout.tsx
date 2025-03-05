@@ -12,7 +12,7 @@ import {
   SkipToContent
 } from '@patternfly/react-core';
 import { routes, IAppRoute, IAppRouteGroup } from '@app/routes';
-import logo from '@app/bgimages/hyper.png';
+import logo from '@app/bgimages/redhat.png';
 
 interface IAppLayout {
   children: React.ReactNode;

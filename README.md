@@ -15,9 +15,12 @@ oc expose svc/workshop-scoreboard-server
 oc get route workshop-scoreboard-server
 ```
 
+## Deploy the Client
+Once the server is running, make note of the Server URL and deploy the client [here](https://github.com/andykrohg/workshop-scoreboard-client?tab=readme-ov-file#deploy-me).
+
 ## Running with Podman
 ```bash
-podman run -it -p 8080:8080 quay.io/akrohg/cs-workshop-scoreboard-server:practical-container-security
+podman run -it -p 8080:8080 -e WORKSHOP_NAME=experience-openshift-virtualization quay.io/akrohg/workshop-scoreboard-server
 ```
 
 ## Want to use this scoreboard for a different workshop?
