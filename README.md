@@ -12,11 +12,11 @@ Once the server is deployed, your workshop participants will need to deploy a **
 ## Running on OpenShift
 Run the commands below to deploy your scoreboard server to OpenShift. Once it's running, present the scoreboard on the screen to track progress as participants get their agents deployed.
 ```bash
-oc new-app quay.io/akrohg/cs-workshop-scoreboard-server:practical-container-security
-oc expose svc/cs-workshop-scoreboard-server
+oc new-app quay.io/akrohg/workshop-scoreboard-server -e WORKSHOP_NAME=experience-openshift-virtualization
+oc expose svc/workshop-scoreboard-server
 
 # Get the route to the server
-oc get route cs-workshop-scoreboard-server
+oc get route workshop-scoreboard-server
 ```
 
 ## Running with Podman

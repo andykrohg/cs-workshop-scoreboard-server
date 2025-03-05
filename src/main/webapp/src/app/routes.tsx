@@ -28,7 +28,7 @@ export interface IAppRouteGroup {
 
 export type AppRouteConfig = IAppRoute | IAppRouteGroup;
 
-const moduleDefinitions = require(`../module-definitions/${process.env.WORKSHOP_NAME}.json`);
+const moduleDefinitions = require(`../module-definitions/modules.json`);
 
 const routes: AppRouteConfig[] = moduleDefinitions.map( (moduleDefinition) => {
   return {
