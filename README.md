@@ -5,10 +5,6 @@ It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly
 
 ![Server View](images/server_view.png)
 
-Once the server is deployed, your workshop participants will need to deploy a **telemetry agent** to their bastions/clusters to continually report their status. They'll need:
-* The URL of your Scoreboard Server, and
-* Instructions for deploying the agent, which can be found here: https://github.com/andykrohg/cs-workshop-scoreboard-client/tree/practical-container-security#deploy-me
-
 ## Running on OpenShift
 Run the commands below to deploy your scoreboard server to OpenShift. Once it's running, present the scoreboard on the screen to track progress as participants get their agents deployed.
 ```bash
