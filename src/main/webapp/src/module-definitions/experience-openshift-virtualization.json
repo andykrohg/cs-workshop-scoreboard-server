@@ -1,0 +1,15 @@
+[
+    {
+        "id": "0",
+        "name": "Experience OpenShift Virtualization",
+        "path": "/",
+        "tasks": [
+            "Virtual Machine Management",
+            "Migrating Existing VMs",
+            "Storage Management",
+            "Backup and Recovery",
+            "Template and Instance Type Management",
+            "VMs and Applications"
+        ]
+    }
+]
