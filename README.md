@@ -1,5 +1,5 @@
 # Workshop Scoreboard - Server
-This directory houses the server side of the **workshop scoreboard**. This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
+This repository houses the server side of the **workshop scoreboard**. This is intended to serve not only as an accountability measure to ensure everyone's engaged, but also as a *gamification element* to keep the workshop fun and competitive.
 
 It is composed of a quarkus resteasy backend in `src/main/java` and a patternfly/reactjs frontend in `src/main/webapp`. It looks like this:
 
