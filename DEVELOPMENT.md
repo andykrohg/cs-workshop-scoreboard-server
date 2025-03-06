@@ -3,8 +3,8 @@
 ## Getting started
 Clone this repository, and `cd` into it:
 ```
-git clone https://github.com/andykrohg/cs-workshop-scoreboard-server.git
-cd cs-workshop-scoreboard-server
+git clone https://github.com/andykrohg/workshop-scoreboard-server.git
+cd workshop-scoreboard-server
 ```
 
 To start the backend in dev mode, run:
@@ -55,7 +55,7 @@ You can customize the workshop modules that appear in the left navigation pane, 
 ]
 ```
 
-You can also customize the title and logo that appear in the top navbar by modifying `src/main/webapp/src/app/AppLayout/AppLayout.tsx`. Once you're satisfied with your changes, proceed below to build a container. You'll also need to create your own client image, instructions for which can be found [here](https://github.com/andykrohg/cs-workshop-scoreboard-client/blob/rosa/DEVELOPMENT.md).
+You can also customize the title and logo that appear in the top navbar by modifying `src/main/webapp/src/app/AppLayout/AppLayout.tsx`. Once you're satisfied with your changes, proceed below to build a container. You'll also need to create your own client image, instructions for which can be found [here](https://github.com/andykrohg/workshop-scoreboard-client/blob/main/DEVELOPMENT.md).
 
 ## Building
 1. First, run a maven build:
@@ -66,4 +66,4 @@ You can also customize the title and logo that appear in the top navbar by modif
    ```bash
    podman build --platform linux/amd64 -t scoreboard-server . -f src/main/docker/Dockerfile.jvm
    ```
-3. Now you're ready to push your new image to quay and substitute it for the OpenShift deployment [here](https://github.com/andykrohg/cs-workshop-scoreboard-server#running-on-openshift)
+3. Now you're ready to push your new image to quay and substitute it for the OpenShift deployment [here](https://github.com/andykrohg/workshop-scoreboard-server#running-on-openshift)
